@@ -2,11 +2,55 @@
 <html>
     <head>
         <title>Local Climbing Area Weather</title>
+        <link rel="stylesheet" type = "text/css" href="{{ url_for('static', filename='/styles/styles.css') }}">
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <h1>Local Climbing Area Weather</h1>
-        <p>This is a list of seven day forecasts for climbing areas that are reasonably driveable for a day or weekend
-            trip. Weather forecasts are pulled from the OpenWeatherMapAPI.</p>
-        <p>{{content|safe}}</p>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+			<ul class="navbar-nav">
+	    		<li class="nav-item">
+			 		<a class="nav-link" href="/">About Me</a>
+				</li>
+				<li class="nav-item">
+		    		<a class="nav-link" href="/resume">Resume</a>
+				</li>
+				<li class="nav-item">
+                    <a class="nav-link" href="/localClimbingWeather"><b>Local Climbing Weather</b></a>
+                </li>
+                <li class="nav-item">
+		    		<a class="nav-link" href="https://github.com/mgubbins?tab=repositories" target="_blank">GitHub</a>
+				</li>
+	    	</ul>
+        </div>
+    </nav>
+        <div class="grid-container">
+            <div class="grid-child1">
+                <h1>Local Climbing Area Weather</h1>
+                <div>This is a list of eight day forecasts for climbing areas that are within a reasonably driveable distance for me, if planning a day or weekend
+                    trip. Weather forecasts are pulled from OpenWeatherMapAPI.</div>
+            </div>
+            <div class="grid-child2">
+                <div class="grid-text">{{area1|safe}}</div>
+            </div>
+            <div class="grid-child3">
+                <div class="grid-text">{{area2|safe}}</div>
+            </div>
+            <div class="grid-child4">
+                <div class="grid-text">{{area3|safe}}</div>
+            </div>
+            <div class="grid-child5">
+                <div class="grid-text">{{area4|safe}}</div>
+            </div>
+            <div class="grid-child6">
+                <div class="grid-text">{{area5|safe}}</div>
+            </div>
+        </div>
     </body>
 </html>

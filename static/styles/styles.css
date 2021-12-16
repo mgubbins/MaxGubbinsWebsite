@@ -2,7 +2,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 40%;
   border-radius: 50%;
 }
 
@@ -15,3 +15,106 @@
 	font-weight: normal;
 	font-size: 14px;
 }
+
+.resumeHeading {
+    text-align: right;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: right;
+}
+
+.resumeSubHeading{
+    font-family: Arial, sans-serif;
+    color: #3262a8;
+    font-size: 18px
+    height: 100%;
+    margin: 0px;
+    padding-left: 1%;
+}
+
+.resumeHeadingDiv{
+    background-color: #3262a8;
+    padding-top: 3%;
+    padding-right: 1%;
+    padding-bottom: 3%;
+    padding-left: 1%;
+}
+
+.resumeContent{
+    padding-left: 3%;
+}
+
+.experienceHeadings{
+    padding-left: 2%;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(autofit, (1fr, 1fr));
+    grid-gap: 20px;
+}
+
+.grid-text{
+  margin-top: 25%;
+  margin-bottom: 25%;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 25px;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-weight: normal;
+}
+
+.grid-child1{
+    margin: auto;
+    width: 50%;
+    grid-column 1;
+    grid-row: 1;
+}
+
+.grid-child2{
+    grid-column 2;
+    grid-row: 1;
+    background-image: url("../images/Muscatatuck.jpg");
+    background-size: cover;
+    border-radius: 5%;
+    background-repeat: no-repeat;
+}
+
+.grid-child3{
+    grid-column 1;
+    grid-row: 2;
+    background-image: url("../images/Unlikely.jpg");
+    background-size: cover;
+    border-radius: 5%;
+    background-repeat: no-repeat;
+}
+
+.grid-child4{
+    grid-column 2;
+    grid-row: 2;
+    background-image: url("../images/JacksonFalls.jpg");
+    background-size: cover;
+    border-radius: 5%;
+    background-repeat: no-repeat;
+}
+
+.grid-child5{
+    grid-column 1;
+    grid-row: 3;
+    background-image: url("../images/HolyBoulders.jpg");
+    background-size: cover;
+    border-radius: 5%;
+    background-repeat: no-repeat;
+}
+
+.grid-child6{
+    grid-column 2;
+    grid-row: 3;
+    background-image: url("../images/RRG.jpg");
+    background-size: cover;
+    border-radius: 5%;
+    background-repeat: no-repeat;
+}
+

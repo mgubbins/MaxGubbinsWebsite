@@ -25,33 +25,33 @@ def resume():
 # defining homepage function that will run on website
 @app.route("/localClimbingWeather")  # defining how to access page.
 def home():
-        htmlvar = ''
+
         # Muscatatuck
-        htmlvar += 'Muscatatuck<br>'
+        area1var = 'Muscatatuck<br>'
         report = weather(38.98, -85.62)
         for i in report:
-            htmlvar += i
+            area1var += i + "</br>"
 
-        htmlvar += '<br>Unlikely Wall<br>'
+        area2var = '<br>Unlikely Wall<br>'
         report = weather(39.02, -86.54)
         for i in report:
-            htmlvar += i
+            area2var += i + "</br>"
 
-        htmlvar += '<br>Jackson Falls<br>'
+        area3var = '<br>Jackson Falls<br>'
         report = weather(37.51, -88.69)
         for i in report:
-            htmlvar += i
+            area3var += i + "</br>"
 
-        htmlvar += '<br>Holy Boulders<br>'
+        area4var = '<br>Holy Boulders<br>'
         report = weather(37.62, -89.42)
         for i in report:
-            htmlvar += i
+            area4var += i + "</br>"
 
-        htmlvar += '<br>Red River Gorge<br>'
+        area5var = '<br>Red River Gorge<br>'
         report = weather(37.46, -83.79)
         for i in report:
-            htmlvar += i
-        return render_template("localWeather.html", content=htmlvar)
+            area5var += i + "</br>"
+        return render_template("localWeather.html", area1=area1var, area2=area2var, area3=area3var, area4=area4var, area5=area5var)
 
 
 def weather(lat, lon):
